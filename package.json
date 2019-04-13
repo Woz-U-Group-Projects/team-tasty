@@ -18,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/Woz-U-Group-Projects/team-tasty/issues"
   },
-  "homepage": "https://github.com/Woz-U-Group-Projects/team-tasty#readme"
+  "homepage": "https://github.com/Woz-U-Group-Projects/team-tasty#readme",
+  "dependencies": {
+    "npm": "^6.9.0"
+  }
 }
