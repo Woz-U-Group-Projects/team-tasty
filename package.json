@@ -1,0 +1,22 @@
+{
+  "name": "tastytexts",
+  "version": "1.0.0",
+  "description": "Group project for Woz U",
+  "main": "index.js",
+  "scripts": {
+    "test": "start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Woz-U-Group-Projects/team-tasty.git"
+  },
+  "keywords": [
+    "recipes"
+  ],
+  "author": "Ray, Brandon, and Donn",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Woz-U-Group-Projects/team-tasty/issues"
+  },
+  "homepage": "https://github.com/Woz-U-Group-Projects/team-tasty#readme"
+}
