@@ -21,6 +21,7 @@
   "homepage": "https://github.com/Woz-U-Group-Projects/team-tasty#readme",
   "dependencies": {
     "bootstrap": "^4.3.1",
+    "jquery": "^3.4.0",
     "npm": "^6.9.0"
   }
 }
