@@ -1,5 +1,40 @@
 /* Background */
 
 body {
-  background-color: #ffcc66;
+  background-color: #C8AC58;
+}
+
+.container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  width: 500px;
+  height: 500px;
+  margin: 0 auto;
+  margin-top: 15%;
+  background-color: grey;
+}
+
+#titlesign {
+  position: absolute;
+  display: block;
+  margin-top: 15%;
+  text-align: center;
+}
+
+#title {
+  font-family: 'Flavors', cursive;
+  font-size: 48pt;
+}
+
+#line {
+  position: relative;
+  /* padding-top: 10px; */
+}
+
+#login {
+  position: relative;
+  margin-top: 30%;
+  justify-content: center;
+  align-items: center;
 }
