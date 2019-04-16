@@ -2,9 +2,10 @@
 
 $(document).ready(function() {
   $(".showcase").slick({
-    dots: true,
-    arrows: true,
+    dots: false,
+    arrows: false,
     autoplay: true,
-    autoplaySpeed: 3000
+    autoplaySpeed: 3000,
+    fade: true
   });
 });
