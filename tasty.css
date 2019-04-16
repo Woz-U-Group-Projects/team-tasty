@@ -9,9 +9,9 @@ body {
   display: flex;
   justify-content: center;
   width: 500px;
-  height: 500px;
+  height: 600px;
   margin: 0 auto;
-  margin-top: 15%;
+  margin-top: 13%;
   background-color: grey;
 }
 
@@ -24,17 +24,27 @@ body {
 
 #title {
   font-family: 'Flavors', cursive;
-  font-size: 48pt;
+  font-size: 56pt;
+  color: #5e0c0c;
 }
 
 #line {
   position: relative;
-  /* padding-top: 10px; */
+  color: #5e0c0c;
 }
 
 #login {
   position: relative;
-  margin-top: 30%;
+  margin-top: 33%;
   justify-content: center;
   align-items: center;
+  border-radius: 15px;
+  border-color: #5e0c0c;
+  border-width: medium;
+}
+
+#button {
+    border-radius: 15px;
+    border-color: #5e0c0c;
+    border-width: medium;
 }
