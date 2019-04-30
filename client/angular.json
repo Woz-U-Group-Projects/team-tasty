@@ -41,8 +41,8 @@
             "polyfills": "src/polyfills.ts",
             "tsConfig": "src/tsconfig.app.json",
             "assets": ["src/favicon.ico", "src/assets"],
-            "styles": ["src/styles.css"],
-            "scripts": [],
+            "styles": ["src/styles.css", "team-tasty/node_modules/slick-carousel/slick/slick.scss", "team-tasty/node_modules/slick-carousel/slick/slick-theme.scss"],
+            "scripts": ["team-tasty/node_modules/jquery/dist/jquery.min.js", "team-tasty/node_modules/slick-carousel/slick/slick.min.js"],
             "es5BrowserSupport": true
           },
           "configurations": {
