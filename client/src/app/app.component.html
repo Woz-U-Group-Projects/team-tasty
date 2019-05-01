@@ -40,128 +40,17 @@
         <button (click)="removeSlide()">Remove</button>
         <button (click)="slickModal.slickGoTo(2)">slickGoto 2</button>
         <button (click)="slickModal.unslick()">unslick</button>
-        
-    @Component({
-      ...
-    })
-    class ExampleComponent {
 
-      slides = [
-        {img: "http://placehold.it/350x150/000000"},
-        {img: "http://placehold.it/350x150/111111"},
-        {img: "http://placehold.it/350x150/333333"},
-        {img: "http://placehold.it/350x150/666666"}
-      ];
-      slideConfig = {"slidesToShow": 4, "slidesToScroll": 4};
 
-      addSlide() {
-        this.slides.push({img: "http://placehold.it/350x150/777777"})
-      }
 
-      removeSlide() {
-        this.slides.length = this.slides.length - 1;
-      }
 
-      slickInit(e) {
-        console.log('slick initialized');
-      }
-
-      breakpoint(e) {
-        console.log('breakpoint');
-      }
-
-      afterChange(e) {
-        console.log('afterChange');
-      }
-
-      beforeChange(e) {
-        console.log('beforeChange');
-      }
-    }
-
-    <div id="carousel">
-
-      <!-- Carousel items -->
-
-      <div class="showcase">
-        <div>
-          <img src="team-tasty/images/angelchickenpasta.jpg" width="460" height="276" alt="slider image">
-          <h4 class="slideCap">Angel Chicken Pasta</h4>
-        </div>
-        <div>
-          <img src="team-tasty/images/bananabread.jpg" width="460" height="276" alt="slider image">
-          <h4 class="slideCap">Banana Bread</h4>
-        </div>
-        <div>
-          <img src="team-tasty/images/bananacreampie.jpg" width="460" height="276" alt="slider image">
-          <h4 class="slideCap">Banana Cream Pie</h4>
-        </div>
-        <div>
-          <img src="team-tasty/images/chocolatemoussepie.jpg" width="460" height="276" alt="slider image">
-          <h4 class="slideCap">Chocolate Mousse Pie</h4>
-        </div>
-        <div>
-          <img src="images/creamofmushroomsoup.jpg" width="460" height="276" alt="slider image">
-          <h4 class="slideCap">Cream of Mushroom Soup</h4>
-        </div>
-        <div>
-          <img src="images/easycreamcheesedanish.jpg" width="460" height="276" alt="slider image">
-          <h4 class="slideCap">Easy Cream Cheese Danish</h4>
-        </div>
-        <div>
-          <img src="images/easymeatloaf.jpg" width="460" height="276" alt="slider image">
-          <h4 class="slideCap">Easy Meatloaf</h4>
-        </div>
-        <div>
-          <img src="images/famousporkchops.jpg" width="460" height="276" alt="slider image">
-          <h4 class="slideCap">Famous Pork Chops</h4>
-        </div>
-        <div>
-          <img src="images/fluffypancakes.jpg" width="460" height="276" alt="slider image">
-          <h4 class="slideCap">Fluffy Pancakes</h4>
-        </div>
-        <div>
-          <img src="images/friedfish.jpg" width="460" height="276" alt="slider image">
-          <h4 class="slideCap">Fried Fish</h4>
-        </div>
-        <div>
-          <img src="images/lasagnaalfredorollups.jpg" width="460" height="276" alt="slider image">
-          <h4 class="slideCap">Lasagna Alfredo Rollups</h4>
-        </div>
-        <div>
-          <img src="images/rigatoniallagenovese.jpg" width="460" height="276" alt="slider image">
-          <h4 class="slideCap">Rigatoni Alla Genovese</h4>
-        </div>
-        <div>
-          <img src="images/sausagepotatokalesoup.jpg" width="460" height="276" alt="slider image">
-          <h4 class="slideCap">Sausage Potato Kale Soup</h4>
-        </div>
-        <div>
-          <img src="images/shrimpscampipasta.jpg" width="460" height="276" alt="slider image">
-          <h4 class="slideCap">Shrimp Scampi Pasta</h4>
-        </div>
-        <div>
-          <img src="images/spanishgarlicshrimp.jpg" width="460" height="276" alt="slider image">
-          <h4 class="slideCap">Spanish Garlic Shrimp</h4>
-        </div>
-        <div>
-          <img src="images/spinachandbaconquiche.jpg" width="460" height="276" alt="slider image">
-          <h4 class="slideCap">Spinach and Bacon Quiche</h4>
-        </div>
-        <div>
-          <img src="images/springtimespaghetti.jpg" width="460" height="276" alt="slider image">
-          <h4 class="slideCap">Springtime Spaghetti</h4>
-        </div>
-      </div>
-
-    </div>
 
   </div>
 
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
   <script type="text/javascript" src="node_modules/slick-carousel/slick/slick.min.js"></script>
-  <script src="app.js" type="text/javascript"></script>
+  <script src="app.js" type="text/javascript"></script> -->
 </body>
 
 </html>
