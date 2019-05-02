@@ -3,11 +3,6 @@
 
 <head>
   <meta charset="utf-8">
-  <!-- <title>Welcome to Tasty Texts!</title>
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
-  <link rel="stylesheet" type="text/css" href="node_modules/slick-carousel/slick/slick-theme.css">
-  <link rel="stylesheet" type="text/css" href="node_modules/slick-carousel/slick/slick.css">
-  <link rel="stylesheet" href="tasty.css">
   <link href="https://fonts.googleapis.com/css?family=Flavors" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
 </head>
@@ -32,14 +27,14 @@
                             (afterChange)="afterChange($event)"
                             (beforeChange)="beforeChange($event)">
             <div ngxSlickItem *ngFor="let slide of slides" class="slide">
-                  <img src="{{ slide.img }}" alt="" width="100%">
+                  <img src="{{ slide.img }}" alt="" width="50%">
             </div>
         </ngx-slick-carousel>
 
-        <button (click)="addSlide()">Add</button>
+        <!-- <button (click)="addSlide()">Add</button>
         <button (click)="removeSlide()">Remove</button>
         <button (click)="slickModal.slickGoTo(2)">slickGoto 2</button>
-        <button (click)="slickModal.unslick()">unslick</button>
+        <button (click)="slickModal.unslick()">unslick</button> -->
 
 
 
