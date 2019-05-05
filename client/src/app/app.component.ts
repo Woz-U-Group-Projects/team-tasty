@@ -2,21 +2,11 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
-  templateURL: './app-main.component.html',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-//   title = 'client';
-// }
-//
-//
-// // slick
-//
-// @Component({
-//
-// })
-// class ExampleComponent {
+
 
   slides = [
     {img: "assets/img/angelchickenpasta.jpg"},
