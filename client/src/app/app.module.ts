@@ -7,7 +7,7 @@ import { AppComponent } from './app.component';
 import { SlickCarouselModule } from 'ngx-slick-carousel';
 import { AppMainComponent } from './app-main/app-main.component';
 
-import { NavbarComponent } from './navbar/navbar.component'
+import { NavbarComponent } from './navbar/navbar.component';
 
 @NgModule({
   declarations: [
