@@ -8,7 +8,9 @@ import { FavoritesComponent } from './favorites/favorites.component';
 const routes: Routes = [
   // {path: '', pathMatch:"full", redirectTo:"/carousel"},
   // {path: "carousel", component: CarouselComponent},
-  {path: 'home', component: AppMainComponent}, {path: 'menu', component: NavbarComponent}, {path: 'favorites', component: FavoritesComponent}
+  {path: 'home', component: AppMainComponent},
+  {path: 'menu', component: NavbarComponent},
+  {path: 'favorites', component: FavoritesComponent}
 ];
 
 
