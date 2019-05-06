@@ -8,6 +8,7 @@ import { SlickCarouselModule } from 'ngx-slick-carousel';
 import { AppMainComponent } from './app-main/app-main.component';
 
 import { NavbarComponent } from './navbar/navbar.component';
+import { FavoritesComponent } from './favorites/favorites.component';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import { NavbarComponent } from './navbar/navbar.component';
     AppComponent,
     AppMainComponent,
     NavbarComponent,
+    FavoritesComponent,
 
 
 
