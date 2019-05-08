@@ -6,12 +6,15 @@ import { DessertsComponent } from './desserts/desserts.component';
 import { DishesComponent } from './dishes/dishes.component';
 import { SoupsComponent } from './soups/soups.component';
 import { SaladsComponent } from './salads/salads.component';
+import { MenuRoutingModule } from './menu-routing.module';
+
 
 
 @NgModule({
   declarations: [ApptzsComponent, BevsComponent, DessertsComponent, DishesComponent, SoupsComponent, SaladsComponent],
   imports: [
-    CommonModule
+    CommonModule,
+    MenuRoutingModule
   ]
 })
 export class MenuModule { }
