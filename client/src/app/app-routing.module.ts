@@ -5,6 +5,7 @@ import { AppMainComponent} from './app-main/app-main.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { FavoritesComponent } from './favorites/favorites.component';
 import { AppComponent } from './app.component';
+import { MenuModule } from './menu/menu.module';
 
 const routes: Routes = [
   // {path: '', pathMatch: 'home', redirectTo: '/app-main'},
@@ -21,6 +22,6 @@ const routes: Routes = [
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule, MenuModule]
 })
 export class AppRoutingModule { }
