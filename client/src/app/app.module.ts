@@ -9,6 +9,12 @@ import { AppMainComponent } from './app-main/app-main.component';
 
 import { NavbarComponent } from './navbar/navbar.component';
 import { FavoritesComponent } from './favorites/favorites.component';
+import { SoupsComponent } from './soups/soups.component';
+import { SaladsComponent } from './salads/salads.component';
+import { BevsComponent } from './bevs/bevs.component';
+import { ApptzsComponent } from './apptzs/apptzs.component';
+import { DishesComponent } from './dishes/dishes.component';
+import { DessertsComponent } from './desserts/desserts.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +23,12 @@ import { FavoritesComponent } from './favorites/favorites.component';
     AppMainComponent,
     NavbarComponent,
     FavoritesComponent,
+    SoupsComponent,
+    SaladsComponent,
+    BevsComponent,
+    ApptzsComponent,
+    DishesComponent,
+    DessertsComponent,
 
 
 
