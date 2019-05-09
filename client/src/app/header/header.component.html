@@ -1,4 +1,11 @@
-<!-- basic tool bar -->
 <mat-toolbar color="primary">
-  Tasty! MyRecipes
+  <span>
+    <a routerLink="/">Tasty Recipes</a>
+  </span>
+  <span class="spacer"></span>
+  <ul>
+    <li>
+      <a mat-button routerLink="/create" routerLinkActive="mat-accent">New Post</a>
+    </li>
+  </ul>
 </mat-toolbar>
