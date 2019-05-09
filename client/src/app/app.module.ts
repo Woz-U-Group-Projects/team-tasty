@@ -19,12 +19,14 @@ import { LoginComponent } from './auth/login/login.component';
 import { HeaderComponent } from './header/header.component';
 import { PostCreateComponent } from './posts/post-create/post-create.component';
 import { PostListComponent } from './posts/post-list/post-list.component';
+import { SignupComponent } from './auth/signup/signup.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
+    SignupComponent,
     HeaderComponent,
     PostCreateComponent,
     PostListComponent
