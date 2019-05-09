@@ -1,58 +1,50 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <title></title>
+  </head>
 
-<head>
-  <meta charset="utf-8">
-  <title></title>
-</head>
-
-<body>
-
-  <!-- Navigation -->
-  <div class="nav-master">
-    <div class="panel-heading">
-      <h4 class="panel-title">
-        <a data-toggle="collapse" href="#collapse1">Menu</a>
-      </h4>
-    </div>
-    <div id="collapse1" class="panel-collapse collapse">
-      <ul class="list-group">
-        <ul>
-          <li class="nav-item">
-            <a href="#">Soups</a>
-          </li>
-          <li class="nav-item">
-            <a href="#">Salads</a>
-          </li>
-          <li class="nav-item">
-            <a href="#">Beverages</a>
-          </li>
-          <li class="nav-item">
-            <a href="#">Appetizers</a>
-          </li>
-          <li class="nav-item">
-            <a href="#">Main Dishes</a>
-          </li>
-          <li class="nav-item">
-            <a href="#">Desserts</a>
-          </li>
-          <li class="nav-item">
-            <a href="#">Main</a>
-          </li>
-          <li class="nav-item">
-            <a href="#">Login</a>
-          </li>
+  <body>
+    <!-- Navigation -->
+    <div class="nav-master">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" href="#collapse1">Menu</a>
+        </h4>
+      </div>
+      <div id="collapse1" class="panel-collapse collapse">
+        <ul class="list-group">
+          <ul>
+            <li class="nav-item">
+              <a routerLink="soups">Soups</a>
+            </li>
+            <li class="nav-item">
+              <a routerLink="salads">Salads</a>
+            </li>
+            <li class="nav-item">
+              <a routerLink="beverages">Beverages</a>
+            </li>
+            <li class="nav-item">
+              <a routerLink="appetizers">Appetizers</a>
+            </li>
+            <li class="nav-item">
+              <a routerLink="dishes">Main Dishes</a>
+            </li>
+            <li class="nav-item">
+              <a routerLink="desserts">Desserts</a>
+            </li>
+            <li class="nav-item">
+              <a routerLink="/home">Main</a>
+            </li>
+            <li class="nav-item">
+              <a routerLink="/login">Login</a>
+            </li>
+          </ul>
         </ul>
-
-        
-        
-      </ul>
+      </div>
     </div>
-  </div>
+  </body>
 
-
-</body>
-
-<router-outlet></router-outlet>
-
+  <router-outlet></router-outlet>
 </html>

@@ -10,6 +10,7 @@ import { AppMainComponent } from './app-main/app-main.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { FavoritesComponent } from './favorites/favorites.component';
 import { MenuModule } from './menu/menu.module';
+import { CarouselComponent } from './carousel/carousel.component';
 
 @NgModule({
   declarations: [
@@ -18,10 +19,7 @@ import { MenuModule } from './menu/menu.module';
     AppMainComponent,
     NavbarComponent,
     FavoritesComponent,
-    
-
-
-
+    CarouselComponent
   ],
   imports: [
     BrowserModule,

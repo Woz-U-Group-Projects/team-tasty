@@ -1,60 +1,32 @@
-
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Flavors"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Source+Sans+Pro"
+      rel="stylesheet"
+    />
+    <title>Welcome!</title>
+  </head>
 
-<head>
-  <meta charset="utf-8">
-  <link href="https://fonts.googleapis.com/css?family=Flavors" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
-  <title>Welcome!</title>
-</head>
+  <body>
+    <div class="container">
+      <div id="titlesign">
+        <a routerLink="/home"><h1 id="title">Tasty Texts</h1></a>
+        <a routerLink="/menu"><h1 id="title">Menu</h1></a>
 
-<body>
-  <div class="container">
-    <div id="titlesign">
-      <a routerLink="/home"><h1 id="title">Tasty Texts</h1></a>
+        <!--<a routerLink="/carousel">carousel</a>-->
 
-      <!--<a routerLink="/carousel">carousel</a>-->
-
-      <p id="line">__________________________________________</p>
+        <p id="line">__________________________________________</p>
+      </div>
+      <router-outlet></router-outlet>
     </div>
-
-    <!-- <div id="login">
-      <input type="password" id="login" placeholder="   email">
-      <button type="link" id="button">Login</button>
-    </div> -->
-
-    <!-- You can now use your library component in app.component.html -->
-        <ngx-slick-carousel class="carousel"
-                            #slickModal="slick-carousel"
-                            [config]="slideConfig"
-                            (init)="slickInit($event)"
-                            (breakpoint)="breakpoint($event)"
-                            (afterChange)="afterChange($event)"
-                            (beforeChange)="beforeChange($event)">
-            <div ngxSlickItem *ngFor="let slide of slides" class="slide">
-                  <img src="{{ slide.img }}" alt="" width="50%">
-            </div>
-        </ngx-slick-carousel>
-
-        <!-- <button (click)="addSlide()">Add</button>
-        <button (click)="removeSlide()">Remove</button>
-        <button (click)="slickModal.slickGoTo(2)">slickGoto 2</button>
-        <button (click)="slickModal.unslick()">unslick</button> -->
-
-
-
-
-        <router-outlet></router-outlet>
-
-        
-  </div>
-
-
-</body>
-
+    <div class="foot">
+      <footer>© The Team Tasty Group</footer>
+    </div>
+  </body>
 </html>
-
-
-
-
