@@ -27,7 +27,8 @@ router.post('/signup', function(req, res, next) {
     })
     .spread(function(result, created) {
       if (created) {
-        res.redirect("/users/login" );
+        // res.redirect("/users/login" );
+        res.send('user created');
       } else {
         res.send('this user already exists');
       }
@@ -45,7 +46,8 @@ router.post('/signup', function(req, res, next) {
      failureRedirect: "/users/login"
    }),
    function(req, res, next) {
-     res.redirect("profile/" + req.user.UserId);
+    //  res.redirect("profile/" + req.user.UserId);
+    res.send('user logged in');
    }
  );
  
@@ -66,7 +68,8 @@ router.get('/profile/:id', connectEnsure.ensureLoggedIn("/users/login"), functio
 
 router.get('/logout', function(req, res) {
   req.logout();
-  res.redirect('/users/login');
+  // res.redirect('/users/login');
+  res.send('logged out!');
 });
 
        
