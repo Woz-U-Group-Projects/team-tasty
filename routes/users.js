@@ -69,7 +69,7 @@ router.get('/profile/:id', connectEnsure.ensureLoggedIn("/users/login"), functio
 router.get('/logout', function(req, res) {
   req.logout();
   // res.redirect('/users/login');
-  res.send('logged out!');
+  res.send('logged out');
 });
 
        
