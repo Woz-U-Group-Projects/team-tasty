@@ -6,13 +6,13 @@ const passport = require('passport');
 const connectEnsure = require('connect-ensure-login');
 
 
-router.get('/', function(req, res, next) {
-  res.send('respond with a resource');
-});
+// router.get('/', function(req, res, next) {
+//   res.send('respond with a resource');
+// });
 
-router.get('/signup', function(req, res, next) {
-  res.render('signup');
-});
+// router.get('/signup', function(req, res, next) {
+//   res.render('signup');
+// });
 
 router.post('/signup', function(req, res, next) {
   models.users
@@ -35,9 +35,9 @@ router.post('/signup', function(req, res, next) {
 });
 
 
-router.get('/login', function(req, res, next) {
-  res.render('login');
-});
+// router.get('/login', function(req, res, next) {
+//   res.render('login');
+// });
 
  router.post(
    "/login",
