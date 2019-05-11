@@ -1,32 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link
-      href="https://fonts.googleapis.com/css?family=Flavors"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css?family=Source+Sans+Pro"
-      rel="stylesheet"
-    />
-    <title>Welcome!</title>
-  </head>
 
-  <body>
-    <div class="container">
-      <div id="titlesign">
-        <a routerLink="/home"><h1 id="title">Tasty Texts</h1></a>
-        <a routerLink="/menu"><h1 id="title">Menu</h1></a>
+<head>
+  <meta charset="utf-8" />
+  <link href="https://fonts.googleapis.com/css?family=Flavors" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet" />
+  <title>Welcome!</title>
+</head>
 
-        <!--<a routerLink="/carousel">carousel</a>-->
-
-        <p id="line">__________________________________________</p>
-      </div>
-      <router-outlet></router-outlet>
+<body>
+  <div class="container">
+    <div id="titlesign">
+      <a routerLink="/home">
+        <h1 id="title">Tasty Texts</h1>
+      </a>
     </div>
+    <div id="menuSpace">
+      <a routerLink="/menu">
+        <h1 id="menuPath">Menu</h1>
+      </a>
+    </div>
+
+    
+
+    <p id="line">__________________________________________</p>
+
+    <div id="loginElement">
+
+    </div>
+
+    <router-outlet></router-outlet>
+
     <div class="foot">
       <footer>© The Team Tasty Group</footer>
     </div>
-  </body>
+  </div>
+</body>
+
 </html>

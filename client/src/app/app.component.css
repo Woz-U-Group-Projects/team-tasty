@@ -1,0 +1,39 @@
+#title {
+    justify-content: center;
+    text-align: center;
+    font-family: 'Flavors', cursive;
+    font-size: 60pt;
+    color: #5e0c0c;
+}
+
+#titlesign {
+    height: 150px;
+}
+
+#titlesign>a {
+    text-decoration-line: none;
+}
+
+#menuSpace {
+    height: 75px;
+}
+
+#menuPath {
+    text-align: right;
+    padding-right: 20%;
+    font-family: 'Source Sans Pro', sans-serif;
+    color: #5e0c0c;
+    text-decoration: none;
+    
+}
+
+#line {
+    margin: 0% auto;
+    position: relative;
+    color: #5e0c0c;
+    top: -20px;
+}
+
+.foot {
+    margin-top: 12%;
+}

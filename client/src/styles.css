@@ -4,3 +4,20 @@
 body {
   background-color: #C8AC58;
 }
+
+.container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  width: 550px;
+  /* height: 800px; */
+  margin: 0 auto;
+  flex-direction: column;
+  /* background-color: grey; */
+}
+
+.foot {
+  text-align: center;
+  color: #5e0c0c;
+  font-family: 'Source Sans Pro', sans-serif;
+}
