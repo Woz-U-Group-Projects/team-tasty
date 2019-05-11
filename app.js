@@ -7,7 +7,7 @@ const cors = require('cors');
 const path = require('path');
 
 const indexRouter = require('./routes/index');
-const usersRouter = require('./routes/users');
+const userRouter = require('./routes/user');
 const postsRouter = require('./routes/posts');
 
 const app = express();
@@ -43,7 +43,7 @@ app.use((req, res, next) => {
 });
 
 app.use('/', indexRouter);
-app.use('/users', usersRouter);
+app.use('/user', userRouter);
 app.use('/posts', postsRouter);
 
 module.exports = app;
