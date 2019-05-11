@@ -1,0 +1,12 @@
+a {
+    color: #5e0c0c;
+    text-decoration-line: none;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 22pt;
+    line-height: 45px;
+    text-align: left;
+}
+
+ul {
+    padding-left: 105px; 
+}
