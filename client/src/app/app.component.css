@@ -14,6 +14,10 @@
     height: 75px;
 }
 
+#menuPath>a:visited, a:link, a:active {
+    text-decoration: none;
+}
+
 #menuPath {
     text-align: right;
     padding-right: 20%;
