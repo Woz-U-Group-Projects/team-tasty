@@ -21,3 +21,19 @@ body {
   color: #5e0c0c;
   font-family: 'Source Sans Pro', sans-serif;
 }
+
+.midSection {
+  width: 400px;
+  height: 50px;
+  /* background-color: grey; */
+  flex-direction: column;
+  margin: 0% auto;
+  margin-top: -20px;
+}
+
+h2 {
+  font-family: 'Source Sans Pro', sans-serif;
+  color: #5e0c0c;
+  text-decoration: none;
+  text-align: center;
+}
