@@ -8,31 +8,26 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { SlickCarouselModule } from 'ngx-slick-carousel';
 import { AppMainComponent } from './app-main/app-main.component';
 
-import { NavbarComponent } from './navbar/navbar.component';
 import { FavoritesComponent } from './favorites/favorites.component';
 import { MenuModule } from './menu/menu.module';
 import { CarouselComponent } from './carousel/carousel.component';
 
 @NgModule({
   declarations: [
-<<<<<<< HEAD
-
-    AppComponent,
+     AppComponent,
     AppMainComponent,
     NavbarComponent,
     FavoritesComponent,
-    CarouselComponent
-=======
-    AppComponent,
-    NavbarComponent
->>>>>>> brandon
+    CarouselComponent,
   ],
+
   imports: [
     BrowserModule,
     AppRoutingModule,
     SlickCarouselModule,
     MenuModule
   ],
+
   providers: [],
   bootstrap: [AppComponent]
 })

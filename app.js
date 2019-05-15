@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 // Carousel
 $(document).ready(function () {
     $(".showcase").slick({
@@ -9,7 +8,7 @@ $(document).ready(function () {
         fade: true
     });
 });
-=======
+
 var createError = require('http-errors');
 var express = require('express');
 var path = require('path');
@@ -71,4 +70,3 @@ models.sequelize.sync().then(function  () {
 });
 
 module.exports = app;
->>>>>>> brandon
