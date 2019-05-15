@@ -7,18 +7,29 @@ const cors = require('cors');
 const path = require('path');
 
 const indexRouter = require('./routes/index');
-const userRouter = require('./routes/user');
+const userRouter = require('./routes/users');
 const postsRouter = require('./routes/posts');
 
 const app = express();
 
-var mongoDB = "mongodb://dbuser:password1@ds121730.mlab.com:21730/tasty-database";
-mongoose.connect(mongoDB, { useNewUrlParser: true });
-mongoose.Promise = global.Promise;
-var db = mongoose.connection;
-db.on("connected", () => console.log(`Mongoose connection open to ${mongoDB}`));
-db.on("disconnected", () => console.log("Mongoose connection disconnected"));
-db.on("error", console.error.bind(console, "Mongoose connection error:"));
+// var mongoDB = "mongodb://dbuser:password1@ds121730.mlab.com:21730/tasty-database";
+// mongoose.connect(mongoDB, { useNewUrlParser: true });
+// mongoose.Promise = global.Promise;
+// var db = mongoose.connection;
+// db.on("connected", () => console.log(`Mongoose connection open to ${mongoDB}`));
+// db.on("disconnected", () => console.log("Mongoose connection disconnected"));
+// db.on("error", console.error.bind(console, "Mongoose connection error:"));
+
+mongoose
+  .connect(
+    "mongodb://dbuser:password1@ds121730.mlab.com:21730/tasty-database"
+  )
+  .then(() => {
+    console.log("Connected to database!");
+  })
+  .catch(() => {
+    console.log("Connection failed!");
+  });
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -43,7 +54,7 @@ app.use((req, res, next) => {
 });
 
 app.use('/', indexRouter);
-app.use('/user', userRouter);
+app.use('/users', userRouter);
 app.use('/posts', postsRouter);
 
 module.exports = app;
