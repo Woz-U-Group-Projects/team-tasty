@@ -7,12 +7,26 @@
   },
   "dependencies": {
     "@angular/material": "^7.3.7",
+    "bcryptjs": "^2.4.3",
+    "connect-ensure-login": "^0.1.1",
     "cookie-parser": "~1.4.3",
     "debug": "~2.6.9",
     "express": "~4.16.0",
+<<<<<<< HEAD
     "jquery": "^3.4.1",
     "morgan": "~1.9.0",
     "ngx-slick-carousel": "^0.4.4",
     "slick-carousel": "^1.8.1"
+=======
+    "express-session": "^1.16.1",
+    "morgan": "~1.9.0",
+    "passport": "^0.4.0",
+    "passport-local": "^1.0.0",
+    "sequelize": "^5.8.5",
+    "sqlite3": "^4.0.6"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.0"
+>>>>>>> brandon
   }
 }
