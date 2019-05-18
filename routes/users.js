@@ -1,77 +1,52 @@
-var express = require('express');
+var express = require("express");
 var router = express.Router();
-const sqlite = require('sqlite3').verbose();
-var models = require('../models');
-const passport = require('passport');
-const connectEnsure = require('connect-ensure-login');
+const passport = require("passport");
+const userModel = require("../models/user");
+var jwt = require("jsonwebtoken");
 
-
-// router.get('/', function(req, res, next) {
-//   res.send('respond with a resource');
-// });
-
-// router.get('/signup', function(req, res, next) {
-//   res.render('signup');
-// });
-
-router.post('/signup', function(req, res, next) {
-  models.users
-    .findOrCreate({
-      where: {
-        FirstName: req.body.firstName,
-        LastName: req.body.lastName,
-        Email: req.body.email,
-        Username: req.body.username,
-        Password: req.body.password
-      }
-    })
-    .spread(function(result, created) {
-      if (created) {
-        // res.redirect("/users/login" );
-        res.send('user created');
-      } else {
-        res.send('this user already exists');
-      }
-    });
+// singup will look for the user and create them if not found
+// the user schema is set to encrypt the password
+router.post("/signup", function(req, res, next) {
+  userModel.findOne({ userName: req.body.username }, function(err, user) {
+    if (user) {
+      res.send("this user already exists");
+    } else {
+      const newUser = new userModel({
+        //firstName: req.body.firstName,
+        //lastName: req.body.lastName,
+        //email: req.body.email,
+        userName: req.body.username,
+        password: req.body.password
+      });
+      newUser.save().then(result => res.send("User Created"));
+    }
+  });
 });
 
-
-// router.get('/login', function(req, res, next) {
-//   res.render('login');
-// });
-
- router.post(
-   "/login",
-   passport.authenticate("local", {
-     failureRedirect: "/users/login"
-   }),
-   function(req, res, next) {
-    //  res.redirect("profile/" + req.user.UserId);
-    res.send('user logged in');
-   }
- );
- 
-
-router.get('/profile/:id', connectEnsure.ensureLoggedIn("/users/login"), function(req, res) {
-  if (req.user.UserId === parseInt(req.params.id)) {
-    res.render('profile', {
-      FirstName: req.user.FirstName,
-        LastName: req.user.LastName,
-        Email: req.user.Email,
-        UserId: req.user.UserId,
-        Username: req.user.Username
-    });
-  } else {
-    res.send('This is not your profile');
-  }
+// login uses the local passport strategy, which will find the user
+// and compare the passwords
+// if successful, create a jwt and attach it as a cookie to the response
+// passport gives us the user as req.user
+router.post("/login", passport.authenticate("local"), function(req, res, next) {
+  console.log(req.user);
+  const token = jwt.sign({ id: req.user.id }, "secretkey", { expiresIn: "1h" });
+  res.cookie("jwt", token);
+  res.send("user logged in");
 });
 
-router.get('/logout', function(req, res) {
-  req.logout();
-  // res.redirect('/users/login');
-  res.send('logged out');
+// profile(for testing)
+// reads the jwt from the request and validates it for authentication
+// attaches the decrypted token as req.user
+// req.user.id will be the mongodb user id field
+router.get("/profile", passport.authenticate("jwt"), function(req, res, next) {
+  console.log(req.user);
+  res.send("profile");
 });
 
-       
+// logging out is simply removing the jtw cookie
+router.get("/logout", function(req, res) {
+  res.cookie("jwt", "", { expires: new Date(0) });
+  res.send("logged out");
+});
 
 module.exports = router;
