@@ -11,7 +11,7 @@ img {
     border-style: dotted;
     border-left: 3px;
     border-right: 3px;
-    padding: 4px;
+    /* padding: 2px; */
 
 }
 
@@ -20,5 +20,4 @@ img {
     width: 366px;
     height: 52%;
     margin-bottom: -150px;
-    
 }

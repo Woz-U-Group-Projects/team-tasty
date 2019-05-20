@@ -34,6 +34,15 @@
     top: -20px;
 }
 
+#loginElement {
+    position: relative;
+    margin: 0% auto;
+    width: 120px;
+    /* background: grey; */
+    color: #5e0c0c;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
 .foot {
     margin-top: 12%;
 }
