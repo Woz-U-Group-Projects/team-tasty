@@ -14,7 +14,7 @@ router.post("/signup", function(req, res, next) {
       const newUser = new userModel({
         //firstName: req.body.firstName,
         //lastName: req.body.lastName,
-        //email: req.body.email,
+        email: req.body.email,
         userName: req.body.username,
         password: req.body.password
       });

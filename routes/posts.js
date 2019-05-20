@@ -1,8 +1,8 @@
 const express = require("express");
-const multer = require("multer");
-const Post = require("../models/post");
-const passport = require("passport");
 const router = express.Router();
+const multer = require("multer");
+const passport = require("passport");
+const Post = require("../models/post");
 
 const MIME_TYPE_MAP = {
   "image/png": "png",

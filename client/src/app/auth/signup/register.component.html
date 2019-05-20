@@ -1,0 +1,18 @@
+<h3>Sign Up</h3>
+<p>
+  <input
+  [(ngModel)]="user.username"
+  placeholder="username" />
+  <br />
+  <input
+  [(ngModel)]="user.email"
+  placeholder="email"
+  type="email" />
+  <br />
+  <input
+  [(ngModel)]="user.password"
+  placeholder="password"
+  type="password" />
+  <br />
+  <button (click)="register()">register</button>
+</p>
