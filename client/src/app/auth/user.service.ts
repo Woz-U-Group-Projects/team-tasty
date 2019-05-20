@@ -1,13 +1,21 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { Router } from '@angular/router';
 import { User } from './user';
 import { Observable } from 'rxjs';
+import { Subject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class UserService {
-  constructor(private http: HttpClient) { }
+  private isAuthenticated = false;
+  private token: string;
+  private tokenTimer: any;
+  private userId: string;
+  private authStatusListener = new Subject<boolean>();
+
+  constructor(private http: HttpClient, private router: Router) { }
 
   // options allows us to flag that we are using credentials, which will allow the jtw cookie on all requests
   options = { withCredentials: true };
@@ -17,6 +25,18 @@ export class UserService {
 
   // boolean value to hold the login status
   loggedIn: boolean = false;
+
+  getAuthStatusListener() {
+    return this.authStatusListener.asObservable();
+  }
+
+  getUserId() {
+    return this.userId;
+  }
+
+  getIsAuth() {
+    return this.isAuthenticated;
+  }
 
   // register a user, must .subscribe() to trigger
   // POST baserl/signup

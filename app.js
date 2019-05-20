@@ -48,11 +48,6 @@ app.use((req, res, next) => {
   next();
 });
 
-// add the routers
-app.use("/", indexRouter);
-app.use("/users", usersRouter);
-app.use("/posts", postsRouter);
-
 // mongodb connection string
 const mongoURL = "mongodb://dbuser:password1@ds121730.mlab.com:21730/tasty-database";
 
@@ -67,5 +62,10 @@ mongoose
   .catch(() => {
     console.log("Connection failed!");
   });
+
+// add the routers
+app.use("/", indexRouter);
+app.use("/users", usersRouter);
+app.use("/posts", postsRouter);
 
 module.exports = app;
