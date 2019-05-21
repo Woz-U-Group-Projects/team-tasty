@@ -21,7 +21,7 @@ var app = express();
 // serve the public folder
 app.use(express.static(path.join(__dirname, "public")));
 // serve the images folder
-app.use("/images", express.static(path.join("public/images")));
+app.use("/images", express.static(path.join("/images")));
 
 // initialize passport
 app.use(passport.initialize());
