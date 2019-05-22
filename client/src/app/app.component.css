@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #title {
     justify-content: center;
     text-align: center;
@@ -46,3 +47,10 @@
 .foot {
     margin-top: 12%;
 }
+=======
+main {
+  margin-top: 1rem;
+  width: 80%;
+  margin: 1rem auto;
+}
+>>>>>>> origin/ashley

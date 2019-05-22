@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 var express = require("express");
 var path = require("path");
 var cookieParser = require("cookie-parser");
@@ -35,6 +36,50 @@ app.use(bodyParser.urlencoded({extended: false}));
 app.use(cors({ origin: "http://localhost:4200", credentials: true }));
 
 // cors headers
+=======
+const express = require('express');
+const mongoose = require('mongoose');
+const bodyParser = require('body-parser');
+const cookieParser = require('cookie-parser');
+const logger = require('morgan');
+const cors = require('cors');
+const path = require('path');
+
+const indexRouter = require('./routes/index');
+const userRouter = require('./routes/users');
+const postsRouter = require('./routes/posts');
+
+const app = express();
+
+// var mongoDB = "mongodb://dbuser:password1@ds121730.mlab.com:21730/tasty-database";
+// mongoose.connect(mongoDB, { useNewUrlParser: true });
+// mongoose.Promise = global.Promise;
+// var db = mongoose.connection;
+// db.on("connected", () => console.log(`Mongoose connection open to ${mongoDB}`));
+// db.on("disconnected", () => console.log("Mongoose connection disconnected"));
+// db.on("error", console.error.bind(console, "Mongoose connection error:"));
+
+mongoose
+  .connect(
+    "mongodb://dbuser:password1@ds121730.mlab.com:21730/tasty-database"
+  )
+  .then(() => {
+    console.log("Connected to database!");
+  })
+  .catch(() => {
+    console.log("Connection failed!");
+  });
+
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use("/images", express.static(path.join("public/images")));
+app.use(logger("dev"));
+app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
+app.use(cookieParser());
+app.use(cors({ origin: "http://localhost:4200", credentials: true }));
+
+>>>>>>> origin/ashley
 app.use((req, res, next) => {
   res.setHeader("Access-Control-Allow-Origin", "*");
   res.setHeader(
@@ -47,6 +92,7 @@ app.use((req, res, next) => {
   );
   next();
 });
+<<<<<<< HEAD
 
 // add the routers
 app.use("/", indexRouter);
@@ -67,5 +113,11 @@ mongoose
   .catch(() => {
     console.log("Connection failed!");
   });
+=======
+
+app.use('/', indexRouter);
+app.use('/users', userRouter);
+app.use('/posts', postsRouter);
+>>>>>>> origin/ashley
 
 module.exports = app;

@@ -1,6 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 @import "@angular/material/prebuilt-themes/deeppurple-amber.css";
 
+<<<<<<< HEAD
 body {
   background-color: #C8AC58;
 }
@@ -39,3 +40,6 @@ h2 {
 }
 html, body { height: 100%; }
 body { margin: 0; font-family: "Helvetica Neue", sans-serif; }
+=======
+body { margin: 0; }
+>>>>>>> origin/ashley
