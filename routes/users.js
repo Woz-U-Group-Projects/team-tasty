@@ -14,6 +14,7 @@ const connectEnsure = require('connect-ensure-login');
 //   res.render('signup');
 // });
 
+
 router.post('/signup', function(req, res, next) {
   models.users
     .findOrCreate({
